@@ -1,0 +1,35 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.pengdafu.IDEWebBrowser</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>IDEWebBrowser</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="pengdafu0824@google.com" url="https://www.yourcompany.com">Individual developer</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+   IDE的一个内嵌浏览器。<br>
+    1.0.0版本支持的功能：<br>
+    1.可以在IDE展示网页的一个内嵌浏览器，在输入框中输入地址，然后回车即可访问对应的网页。<br>
+    2.保存上次访问的网页地址，下次打开IDE时，会自动打开上次访问的网页。<br>
+    3.可以通过点击按钮，刷新当前网页。<br>
+    4.可以通过点击按钮，返回上一个网页。<br>
+    5.可以通过点击按钮，前进到下一个网页。<br>
+  ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="IDE Web Browser" anchor="right" factoryClass="com.pengdafu.idewebbrowser.Window"/>
+    </extensions>
+</idea-plugin>
